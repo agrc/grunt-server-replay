@@ -24,10 +24,8 @@ module.exports = function (grunt) {
 
         var har = JSON.parse(fs.readFileSync(options.harPath));
 
-        var config = parseConfig((options.configPath) ? fs.readFileSync(options.configPath, 'utf8'): null);
-
         serverReplay(har, {
-            config: config,
+            config: parseConfig(JSON.stringify(options.config)),
             resolvePath: path.dirname(options.configPath),
             port: options.port,
             debug: options.debug

@@ -42,10 +42,10 @@ Type: `String`
 
 The `.har` file to use.
 
-#### options.configPath
-Type: `String`
+#### options.config
+Type: `Object`
 
-The config file to use.
+The [config object](https://github.com/Stuk/server-replay#configuration) use with server-replay. Note that the format is an object rather than a path to a file. This allows the configs to be defined within your grunt file instead of a separate `.json` file.
 
 #### options.port
 Type: `Number`  
