@@ -1,6 +1,6 @@
 {
   "name": "grunt-server-replay",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "A Grunt wrapper around https://github.com/Stuk/server-replay",
   "homepage": "https://github.com/agrc/grunt-server-replay",
   "repository": "https://github.com/agrc/grunt-server-replay",
@@ -10,7 +10,7 @@
     "url": "https://github.com/stdavis"
   },
   "keywords": [
-    "gruntplugin"
+    "grunt server replay"
   ],
   "main": "Gruntfile.js",
   "engines": {
