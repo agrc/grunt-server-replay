@@ -30,17 +30,13 @@ grunt.initConfig({
         },
         your_target: {
             // Target-specific file lists and/or options go here.
+            src: ['harFiles/*.har'] // har file(s)
         },
     },
 })
 ```
 
 ### Options
-
-#### options.harPath [required]
-Type: `String`
-
-The `.har` file to use.
 
 #### options.config
 Type: `Object`

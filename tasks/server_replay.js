@@ -11,6 +11,7 @@ var parseConfig = require('server-replay/parse-config');
 var serverReplay = require('server-replay/index');
 var path = require('path');
 var fs = require('fs');
+var hars = require('../helpers/hars');
 
 module.exports = function (grunt) {
     grunt.registerMultiTask('server_replay',
@@ -22,9 +23,7 @@ module.exports = function (grunt) {
             debug: false
         });
 
-        var har = JSON.parse(fs.readFileSync(options.harPath));
-
-        serverReplay(har, {
+        serverReplay(hars(this.filesSrc), {
             config: parseConfig(JSON.stringify(options.config)),
             resolvePath: path.dirname(options.configPath),
             port: options.port,
